@@ -1,8 +1,7 @@
 import cv2
 import numpy as np
 import Image
-from constants import *  
-import numpy as np
+from constants import *
 
 cap = cv2.VideoCapture("k1.webm")
 

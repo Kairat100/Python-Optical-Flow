@@ -3,7 +3,7 @@ from numpy import *
 from pylab import *
 import cv2
 
-def draw_flow(im,flow,step=16):
+def draw_flow(im,flow,step=4):
 	""" Plot optical flow at sample points
 	spaced step pixels apart. """
 	h,w = im.shape[:2]
@@ -24,7 +24,7 @@ def draw_flow(im,flow,step=16):
 	return vis
 
 # cap = cv2.VideoCapture(0)
-cap = cv2.VideoCapture("k1.webm")
+cap = cv2.VideoCapture(0)
 
 ret,im = cap.read()
 prev_gray = cv2.cvtColor(im,cv2.COLOR_BGR2GRAY)
