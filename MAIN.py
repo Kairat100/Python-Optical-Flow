@@ -67,8 +67,7 @@ while(1):
   print "Frame: %d -> %d"%(frame_num, num_of_thres_traj)
 
   labels, nbr_objects = measurements.label(movement)
-  print "Number of objects:", nbr_objects
-  print labels
+  print "Number of objects:", nbr_objects  
 
   # print np.count_nonzero(labels == 0)
 
@@ -86,8 +85,7 @@ while(1):
   cv2.bitwise_and(movement, gray_thres_gaus, intersection)
   
   # check trajectory
-  trajectories_find(trajectories, ip, left, frame_num, frame2, flow, clfNB, points, kernel, next)
-
+  trajectories_find(trajectories, ip, left, frame_num, frame2, flow, clfNB, points, kernel)
 
   if np.count_nonzero(intersection) > min_mag_thres_traj and start:
 
